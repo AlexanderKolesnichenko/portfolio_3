@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@import "normalize";
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "core";
+
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/headerBotton";
+@import "blocks/carousel";
+@import "blocks/slider";
+@import "blocks/news";
+@import "blocks/newsArea";
+@import "blocks/games";
+@import "blocks/trailers";
+@import "blocks/public";
+@import "blocks/footer";

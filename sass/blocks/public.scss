@@ -1,0 +1,312 @@
+$textColor: #2d2d2d;
+$iconColor: #8c8c8b;
+$authorBlockBorder: #b6b6b6;
+$red: #bf2d2d;
+
+.public {
+
+  background-color: $white;
+
+  .public__titleBlock {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 50px 0;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .public__title {
+    font-size: 35px;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  .public__all {
+    color: $red;
+    border-bottom: 1px dashed $red;
+    margin-left: 45px;
+    text-decoration: none;
+    text-transform: none;
+    @media (max-width: 768px) {
+      margin: 10px 0 0 0;
+    }
+  }
+
+
+
+  .public__add {
+    outline: 0;
+    width: 180px;
+    height: 35px;
+    color: $white;
+    background-color: $blue;
+    border-radius: 50px;
+    border: none;
+    display: block;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    @media (max-width: 992px) {
+      margin-top: 20px;
+    }
+
+    &:hover, &:active {
+      background-color: darken($blue, 15%);
+    }
+
+  }
+
+
+  .public__title_leftBlock {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+
+
+
+  .public__list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+  }
+
+
+  .public__element {
+    flex-basis: 31.8%;
+    position: relative;
+    margin-bottom: 30px;
+
+    &.public__element_big {
+      flex-basis: 65.8%;
+      @media (max-width: 992px) {
+        flex-basis: 48%;
+      }
+      @media (max-width: 768px) {
+        flex-basis: 90%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      flex-basis: 48%;
+    }
+    @media (max-width: 768px) {
+      flex-basis: 90%;
+    }
+
+
+  }
+
+  .public__link {
+    height: 100%;
+    text-decoration: none;
+    display: block;
+    padding-top: 10px;
+    border: 2px solid $publicBorder;
+
+    &.public__link_big {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    &:hover {
+      background-color: $blue;
+      transition-property: background-color;
+      transition-duration: 500ms;
+
+      .public__text {
+        color: $white;
+      }
+
+      .public__author {
+        background-color: $white;
+        border-top: 1px solid $black;
+
+      }
+
+      .public__date-block {
+
+        background-color: $black;
+
+      }
+
+
+    }
+
+  }
+
+
+  .public__description {
+    width: 48.7%;
+    @media (max-width: 992px) {
+      width: auto;
+    }
+  }
+
+
+  .public__img {
+    flex-basis: 47.5%;
+    margin-right: 15px;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+
+  .public__area_top {
+    display: flex;
+  }
+
+  .public__area_top-left {
+    display: flex;
+    position: absolute;
+    left: -10px;
+  }
+
+  .public__dateBlock {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+    &.public__dateBlock_blue {
+      background-color: $blue;
+    }
+
+    &.public__dateBlock_yellow {
+      background-color: $yellow;
+    }
+
+    &.public__dateBlock_green {
+      background-color: $green;
+    }
+
+    &.public__dateBlock_pink {
+      background-color: $pink;
+    }
+
+    &.public__date-block--five {
+      background-color: $blue;
+    }
+
+
+  }
+
+  .public__date {
+    color: $white;
+
+    & span {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 0.686;
+    }
+  }
+
+
+  .public__photo {
+    width: 60px;
+    height: 60px;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+
+  .public__author {
+    height: 60px;
+    width: 62.5%;
+    background-color: $publicBorder;
+    margin-left: 125px;
+    border-top: 1px solid $authorBlockBorder;
+    box-sizing: border-box;
+  }
+
+
+  .public__authorName {
+    font-size: 18px;
+    color: $blue;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 10px 10px 5px 10px;
+  }
+
+
+  .public__icons {
+    display: flex;
+    margin: 0 10px;
+    font-size: 13px;
+    color: $iconColor;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .public__icon svg {
+    width: 10px;
+    height: 10px;
+    fill: $iconColor;
+    margin-right: 10px;
+  }
+
+
+  .public-subtitle {
+    font-size: 25px;
+    color: $black;
+    font-weight: 700;
+    line-height: 1;
+    margin: 20px;
+
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+
+  }
+
+
+  .public__text {
+
+    font-size: 15px;
+    color: $textColor;
+    line-height: 1.529;
+    margin: 20px;
+
+    & span {
+      font-style: italic;
+
+    }
+
+  }
+
+
+  .public__readMore {
+    @include bottom-style();
+    margin-top: 65px;
+  }
+
+}

@@ -1,0 +1,180 @@
+$titleColor: #241b1b;
+$playColor: #ff4c36;
+$genreColor: #aeaeae;
+$fonColor: #eae7d6;
+$dotsColor: #c2c2c2;
+$dotsActiveColor: #323232;
+
+.trailers {
+  background-color: $fonColor;
+  padding-bottom: 100px;
+
+  .trailers__titleBlock {
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 992px) {
+      justify-content: center;
+      min-height: 200px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+  }
+
+  .trailers__title {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: $titleColor;
+
+  }
+
+
+  .trailers__all {
+
+    color: $blue;
+    border-bottom: 1px dashed $blue;
+    margin-left: 45px;
+    text-decoration: none;
+    @media (max-width: 768px) {
+      margin: 10px 0 0 0;
+    }
+  }
+
+  .trailers__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+  }
+
+
+  .trailers__element {
+    position: relative;
+    padding-bottom: 25px;
+    text-align: center;
+    background-color: $white;
+
+    & .trailers__img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+
+  }
+
+
+  .trailers__link {
+    height: 100%;
+    text-decoration: none;
+    display: block;
+
+
+    &:hover {
+
+      &:before {
+        z-index: 0;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        background-color: #caadd2;
+
+      }
+
+      .trailers__play {
+
+        background-color: $yellow;
+
+      }
+
+      .trailer__genre {
+
+        color: $white;
+
+      }
+
+    }
+
+  }
+
+
+  .trailers__play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: $playColor;
+
+    & .trailers__icon {
+      width: 25px;
+      height: 30px;
+      fill: $white;
+    }
+
+  }
+
+
+  .trailer__description {
+    z-index: 3;
+    font-size: 16px;
+    color: $black;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 40px 20px 30px 20px;
+    max-height: 48px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .trailer__genre {
+
+    position: relative;
+    font-size: 15px;
+    color: $genreColor;
+    line-height: 1.875;
+
+  }
+
+  .owl-nav {
+    @include owl-nav-style();
+
+    button.owl-prev {
+      @include carousel-arrows($blue);
+      left: 0;
+      background-image: url("../img/carousel-left.svg");
+    }
+
+    button.owl-next {
+      @include carousel-arrows($blue);
+      right: 0;
+      background-image: url("../img/carousel-right.svg");
+    }
+
+  }
+
+  .owl-dots {
+    @include dots-style(30%);
+
+    button.owl-dot.active {
+      outline: none;
+      @include dots-btn-style($dotsActiveColor);
+    }
+
+    button.owl-dot {
+      @include dots-btn-style($dotsColor);
+    }
+
+  }
+
+
+}
